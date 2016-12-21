@@ -1,0 +1,24 @@
+{
+	"originals": {
+		"3CDB92CC": {
+			"comment": "Angler - N4F26I, N4F26J",
+			"url": "https://github.com/GioBozza/wakeblock/raw/master/builds/36F63F34.zip"
+		},
+		"0E43FA7A": {
+			"comment": "Angler - N4F26O, NUF26K",
+			"url": "https://github.com/GioBozza/wakeblock/raw/master/builds/541B7213.zip"
+		}
+	},
+	"updates": {
+		"36F63F34": {
+			"comment": "Angler - N4F26I, N4F26J - V1",
+			"update": "false",
+			"url": ""
+		},
+		"541B7213": {
+			"comment": "Angler - N4F26O, NUF26K - V1",
+			"update": "false",
+			"url": ""
+		}
+	}
+}
