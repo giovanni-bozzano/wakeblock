@@ -11,6 +11,14 @@
 		"39647104": {
 			"comment": "Angler - N4F26T, NUF26N",
 			"url": "https://github.com/GiovanniBozzano/wakeblock/raw/master/builds/310FF301.zip"
+		},
+		"18CB10D8": {
+			"comment": "Angler - N2G47H",
+			"url": "https://github.com/GiovanniBozzano/wakeblock/raw/master/builds/7ADE555E.zip"
+		},
+		"3E88A882": {
+			"comment": "Angler - N2G47O",
+			"url": "https://github.com/GiovanniBozzano/wakeblock/raw/master/builds/EA842C25.zip"
 		}
 	},
 	"updates": {
@@ -26,6 +34,16 @@
 		},
 		"310FF301": {
 			"comment": "Angler - N4F26T, NUF26N - V1",
+			"update": "false",
+			"url": ""
+		},
+		"7ADE555E": {
+			"comment": "Angler - N2G47H - V1",
+			"update": "false",
+			"url": ""
+		},
+		"EA842C25": {
+			"comment": "Angler - N2G47O - V1",
 			"update": "false",
 			"url": ""
 		}
