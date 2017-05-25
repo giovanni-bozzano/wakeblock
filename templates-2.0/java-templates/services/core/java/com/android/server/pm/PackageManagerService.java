@@ -11081,7 +11081,6 @@ public class PackageManagerService extends IPackageManager.Stub {
             res.system = res.serviceInfo.applicationInfo.isSystemApp();
             return res;
         }
-
         @Override
         protected void sortResults(List<ResolveInfo> results) {
             Collections.sort(results, mResolvePrioritySorter);

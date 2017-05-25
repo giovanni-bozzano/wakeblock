@@ -19,6 +19,14 @@
 		"3E88A882": {
 			"comment": "Angler - N2G47O",
 			"url": "https://github.com/GiovanniBozzano/wakeblock/raw/master/builds/EA842C25.zip"
+		},
+		"9435187A": {
+			"comment": "OnePlus3T - OxygenOS 4.1.3",
+			"url": "https://github.com/GiovanniBozzano/wakeblock/raw/master/builds/124424C6.zip"
+		},
+		"E5B52298": {
+			"comment": "OnePlus3T - OxygenOS Open Beta 7",
+			"url": "https://github.com/GiovanniBozzano/wakeblock/raw/master/builds/1EF84E19.zip"
 		}
 	},
 	"updates": {
@@ -44,6 +52,16 @@
 		},
 		"EA842C25": {
 			"comment": "Angler - N2G47O - V1",
+			"update": "false",
+			"url": ""
+		},
+		"124424C6": {
+			"comment": "OnePlus3T - OxygenOS 4.1.3 - V1",
+			"update": "false",
+			"url": ""
+		},
+		"1EF84E19": {
+			"comment": "OnePlus3T - OxygenOS Open Beta 7 - V1",
 			"update": "false",
 			"url": ""
 		}
