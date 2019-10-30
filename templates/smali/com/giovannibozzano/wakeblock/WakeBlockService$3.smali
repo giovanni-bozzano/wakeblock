@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lcom/giovannibozzano/wakeblock/WakeBlockService;->bindService(Landroid/content/Context;)V
+    value = Lcom/giovannibozzano/wakeblock/WakeBlockService;->acquireWakeLockInternal(Landroid/content/Context;Landroid/os/IBinder;Ljava/lang/String;Ljava/lang/String;)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -45,13 +45,15 @@
 
     iget-object v1, p0, Lcom/giovannibozzano/wakeblock/WakeBlockService$3;->this$0:Lcom/giovannibozzano/wakeblock/WakeBlockService;
 
-    invoke-static {v1}, Lcom/giovannibozzano/wakeblock/WakeBlockService;->-get3(Lcom/giovannibozzano/wakeblock/WakeBlockService;)Landroid/content/Intent;
+    # getter for: Lcom/giovannibozzano/wakeblock/WakeBlockService;->serviceIntent:Landroid/content/Intent;
+    invoke-static {v1}, Lcom/giovannibozzano/wakeblock/WakeBlockService;->access$400(Lcom/giovannibozzano/wakeblock/WakeBlockService;)Landroid/content/Intent;
 
     move-result-object v1
 
     iget-object v2, p0, Lcom/giovannibozzano/wakeblock/WakeBlockService$3;->this$0:Lcom/giovannibozzano/wakeblock/WakeBlockService;
 
-    invoke-static {v2}, Lcom/giovannibozzano/wakeblock/WakeBlockService;->-get2(Lcom/giovannibozzano/wakeblock/WakeBlockService;)Landroid/content/ServiceConnection;
+    # getter for: Lcom/giovannibozzano/wakeblock/WakeBlockService;->serviceConnection:Landroid/content/ServiceConnection;
+    invoke-static {v2}, Lcom/giovannibozzano/wakeblock/WakeBlockService;->access$500(Lcom/giovannibozzano/wakeblock/WakeBlockService;)Landroid/content/ServiceConnection;
 
     move-result-object v2
 

@@ -35,7 +35,7 @@
 
 # virtual methods
 .method public onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)V
-    .registers 5
+    .registers 8
 
     iget-object v0, p0, Lcom/giovannibozzano/wakeblock/WakeBlockService$1;->this$0:Lcom/giovannibozzano/wakeblock/WakeBlockService;
 
@@ -43,14 +43,64 @@
 
     invoke-direct {v1, p2}, Landroid/os/Messenger;-><init>(Landroid/os/IBinder;)V
 
-    invoke-static {v0, v1}, Lcom/giovannibozzano/wakeblock/WakeBlockService;->-set1(Lcom/giovannibozzano/wakeblock/WakeBlockService;Landroid/os/Messenger;)Landroid/os/Messenger;
+    # setter for: Lcom/giovannibozzano/wakeblock/WakeBlockService;->server:Landroid/os/Messenger;
+    invoke-static {v0, v1}, Lcom/giovannibozzano/wakeblock/WakeBlockService;->access$002(Lcom/giovannibozzano/wakeblock/WakeBlockService;Landroid/os/Messenger;)Landroid/os/Messenger;
 
     iget-object v0, p0, Lcom/giovannibozzano/wakeblock/WakeBlockService$1;->this$0:Lcom/giovannibozzano/wakeblock/WakeBlockService;
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/giovannibozzano/wakeblock/WakeBlockService;->-set2(Lcom/giovannibozzano/wakeblock/WakeBlockService;Z)Z
+    # setter for: Lcom/giovannibozzano/wakeblock/WakeBlockService;->serviceBound:Z
+    invoke-static {v0, v1}, Lcom/giovannibozzano/wakeblock/WakeBlockService;->access$102(Lcom/giovannibozzano/wakeblock/WakeBlockService;Z)Z
 
+    const/4 v0, 0x3
+
+    const/4 v2, 0x0
+
+    :try_start_12
+    invoke-static {v2, v0}, Landroid/os/Message;->obtain(Landroid/os/Handler;I)Landroid/os/Message;
+
+    move-result-object v0
+
+    new-instance v3, Landroid/os/Bundle;
+
+    invoke-direct {v3}, Landroid/os/Bundle;-><init>()V
+
+    const-string v4, "version"
+
+    invoke-virtual {v3, v4, v1}, Landroid/os/Bundle;->putShort(Ljava/lang/String;S)V
+
+    invoke-virtual {v0, v3}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
+
+    iget-object v1, p0, Lcom/giovannibozzano/wakeblock/WakeBlockService$1;->this$0:Lcom/giovannibozzano/wakeblock/WakeBlockService;
+
+    # getter for: Lcom/giovannibozzano/wakeblock/WakeBlockService;->server:Landroid/os/Messenger;
+    invoke-static {v1}, Lcom/giovannibozzano/wakeblock/WakeBlockService;->access$000(Lcom/giovannibozzano/wakeblock/WakeBlockService;)Landroid/os/Messenger;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/os/Messenger;->send(Landroid/os/Message;)V
+    :try_end_2c
+    .catch Landroid/os/RemoteException; {:try_start_12 .. :try_end_2c} :catch_2d
+
+    goto :goto_39
+
+    :catch_2d
+    move-exception v0
+
+    iget-object v1, p0, Lcom/giovannibozzano/wakeblock/WakeBlockService$1;->this$0:Lcom/giovannibozzano/wakeblock/WakeBlockService;
+
+    # setter for: Lcom/giovannibozzano/wakeblock/WakeBlockService;->server:Landroid/os/Messenger;
+    invoke-static {v1, v2}, Lcom/giovannibozzano/wakeblock/WakeBlockService;->access$002(Lcom/giovannibozzano/wakeblock/WakeBlockService;Landroid/os/Messenger;)Landroid/os/Messenger;
+
+    iget-object v1, p0, Lcom/giovannibozzano/wakeblock/WakeBlockService$1;->this$0:Lcom/giovannibozzano/wakeblock/WakeBlockService;
+
+    const/4 v2, 0x0
+
+    # setter for: Lcom/giovannibozzano/wakeblock/WakeBlockService;->serviceBound:Z
+    invoke-static {v1, v2}, Lcom/giovannibozzano/wakeblock/WakeBlockService;->access$102(Lcom/giovannibozzano/wakeblock/WakeBlockService;Z)Z
+
+    :goto_39
     return-void
 .end method
 
@@ -61,37 +111,41 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/giovannibozzano/wakeblock/WakeBlockService;->-set1(Lcom/giovannibozzano/wakeblock/WakeBlockService;Landroid/os/Messenger;)Landroid/os/Messenger;
+    # setter for: Lcom/giovannibozzano/wakeblock/WakeBlockService;->server:Landroid/os/Messenger;
+    invoke-static {v0, v1}, Lcom/giovannibozzano/wakeblock/WakeBlockService;->access$002(Lcom/giovannibozzano/wakeblock/WakeBlockService;Landroid/os/Messenger;)Landroid/os/Messenger;
 
     iget-object v0, p0, Lcom/giovannibozzano/wakeblock/WakeBlockService$1;->this$0:Lcom/giovannibozzano/wakeblock/WakeBlockService;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/giovannibozzano/wakeblock/WakeBlockService;->-set2(Lcom/giovannibozzano/wakeblock/WakeBlockService;Z)Z
+    # setter for: Lcom/giovannibozzano/wakeblock/WakeBlockService;->serviceBound:Z
+    invoke-static {v0, v1}, Lcom/giovannibozzano/wakeblock/WakeBlockService;->access$102(Lcom/giovannibozzano/wakeblock/WakeBlockService;Z)Z
 
-    invoke-static {}, Lcom/giovannibozzano/wakeblock/WakeBlockService;->-get0()Ljava/lang/Object;
-
-    move-result-object v1
-
-    monitor-enter v1
-
-    :try_start_11
-    invoke-static {}, Lcom/giovannibozzano/wakeblock/WakeBlockService;->-get0()Ljava/lang/Object;
+    # getter for: Lcom/giovannibozzano/wakeblock/WakeBlockService;->lock:Ljava/lang/Object;
+    invoke-static {}, Lcom/giovannibozzano/wakeblock/WakeBlockService;->access$200()Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/Object;->notifyAll()V
-    :try_end_18
-    .catchall {:try_start_11 .. :try_end_18} :catchall_1a
+    monitor-enter v0
 
-    monitor-exit v1
+    :try_start_11
+    # getter for: Lcom/giovannibozzano/wakeblock/WakeBlockService;->lock:Ljava/lang/Object;
+    invoke-static {}, Lcom/giovannibozzano/wakeblock/WakeBlockService;->access$200()Ljava/lang/Object;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Object;->notifyAll()V
+
+    monitor-exit v0
 
     return-void
 
     :catchall_1a
-    move-exception v0
+    move-exception v1
 
-    monitor-exit v1
+    monitor-exit v0
+    :try_end_1c
+    .catchall {:try_start_11 .. :try_end_1c} :catchall_1a
 
-    throw v0
+    throw v1
 .end method

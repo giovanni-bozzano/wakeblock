@@ -15,7 +15,7 @@ import android.util.Slog;
 
 public class WakeBlockService
 {
-	private static final short VERSION = 0;
+	private static final short VERSION = 1;
 	private static final WakeBlockService INSTANCE = new WakeBlockService();
 	private static final String TAG = "WakeBlockService";
 	private Messenger client;
@@ -32,6 +32,16 @@ public class WakeBlockService
 		{
 			WakeBlockService.this.server = new Messenger(service);
 			WakeBlockService.this.serviceBound = true;
+			try {
+				Message newMessage = Message.obtain(null, 3);
+				Bundle bundle = new Bundle();
+				bundle.putShort("version", WakeBlockService.VERSION);
+				newMessage.setData(bundle);
+				WakeBlockService.this.server.send(newMessage);
+			} catch (RemoteException exception) {
+				WakeBlockService.this.server = null;
+				WakeBlockService.this.serviceBound = false;
+			}
 		}
 
 		@Override
@@ -90,61 +100,28 @@ public class WakeBlockService
 		this.serviceIntent.putExtra("bundle", bundle);
 		this.serviceIntent.setPackage("com.giovannibozzano.wakeblock");
 	}
-	
-	public void bindService(final Context context)
-	{
-		if (!WakeBlockService.bindNext) {
-			return;
-		}
-		WakeBlockService.bindNext = false;
-		new Thread(new Runnable()
-		{
-			@Override
-			public void run()
-			{
-				context.bindService(WakeBlockService.this.serviceIntent, WakeBlockService.this.serviceConnection, Context.BIND_AUTO_CREATE);
-			}
-		}).start();
-	}
 
-	public void wakeLockUpdateProperties(IBinder lock, String mTag, String tag)
+	public boolean acquireWakeLockInternal(final Context context, IBinder lock, String tag, String packageName)
 	{
-		if (!this.serviceBound || mTag.equals(tag)) {
-			return;
-		}
-		synchronized (WakeBlockService.lock) {
-			try {
-				Message message = Message.obtain(null, 2);
-				Bundle bundle = new Bundle();
-				bundle.putBinder("lock", lock);
-				bundle.putString("old_tag", tag);
-				bundle.putString("new_tag", tag);
-				message.setData(bundle);
-				this.server.send(message);
-			} catch (RemoteException exception) {
-				this.server = null;
-				this.serviceBound = false;
-				return;
-			}
-			try {
-				WakeBlockService.lock.wait();
-			} catch (InterruptedException exception) {
-				Slog.e(WakeBlockService.TAG, exception.getMessage());
-			}
-		}
-	}
-
-	public boolean wakeLockAcquireNew(IBinder lock, String tag, String packageName)
-	{
+		// If the wakelock is the binding signal, bind the service and discard the wakelock
 		if (packageName.equals("com.giovannibozzano.wakeblock") && tag.equals("service_bind")) {
 			if (!this.serviceBound) {
-				WakeBlockService.bindNext = true;
+				new Thread(new Runnable()
+				{
+					@Override
+					public void run()
+					{
+						context.bindService(WakeBlockService.this.serviceIntent, WakeBlockService.this.serviceConnection, Context.BIND_AUTO_CREATE);
+					}
+				}).start();
 			}
 			return false;
 		}
+		// If the service is not bound, accept the wakelock
 		if (!this.serviceBound) {
 			return true;
 		}
+
 		synchronized (WakeBlockService.lock) {
 			WakeBlockService.acquire = true;
 			try {
@@ -170,7 +147,7 @@ public class WakeBlockService
 		}
 	}
 
-	public void wakeLockRelease(IBinder lock, String mTag)
+	public void removeWakeLockLocked(IBinder lock, String mTag)
 	{
 		if (!this.serviceBound) {
 			return;
@@ -180,32 +157,6 @@ public class WakeBlockService
 				Message message = Message.obtain(null, 1);
 				Bundle bundle = new Bundle();
 				bundle.putBinder("lock", lock);
-				bundle.putString("tag", mTag);
-				message.setData(bundle);
-				this.server.send(message);
-			} catch (RemoteException exception) {
-				this.server = null;
-				this.serviceBound = false;
-				return;
-			}
-			try {
-				WakeBlockService.lock.wait();
-			} catch (InterruptedException exception) {
-				Slog.e(WakeBlockService.TAG, exception.getMessage());
-			}
-		}
-	}
-
-	public void wakeLockHandleDeath(IBinder mLock, String mTag)
-	{
-		if (!this.serviceBound) {
-			return;
-		}
-		synchronized (WakeBlockService.lock) {
-			try {
-				Message message = Message.obtain(null, 1);
-				Bundle bundle = new Bundle();
-				bundle.putBinder("lock", mLock);
 				bundle.putString("tag", mTag);
 				message.setData(bundle);
 				this.server.send(message);
