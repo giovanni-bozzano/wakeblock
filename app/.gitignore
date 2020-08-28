@@ -1,0 +1,7 @@
+build/
+release/
+
+*.iml
+*.apk
+
+android-upload.jks

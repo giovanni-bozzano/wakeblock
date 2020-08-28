@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<style name="AppTheme.Light" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+		<item name="windowActionModeOverlay">true</item>
+		<item name="actionModeStyle">@style/ActionModeStyle</item>
+		<item name="android:statusBarColor">@color/md_green_800</item>
+		<item name="colorPrimary">@color/md_green_700</item>
+		<item name="colorPrimaryDark">@color/md_green_800</item>
+		<item name="colorAccent">@color/md_green_800</item>
+		<item name="android:navigationBarColor">?android:colorBackground</item>
+	</style>
+
+	<style name="AppTheme.Dark" parent="Theme.MaterialComponents.NoActionBar">
+		<item name="windowActionModeOverlay">true</item>
+		<item name="actionModeStyle">@style/ActionModeStyle</item>
+		<item name="android:statusBarColor">@color/md_green_700</item>
+		<item name="colorPrimary">@color/md_green_500</item>
+		<item name="colorPrimaryDark">@color/md_green_700</item>
+		<item name="colorAccent">@color/md_green_700</item>
+		<item name="android:colorBackground">@color/md_black_1000</item>
+		<item name="android:navigationBarColor">?android:colorBackground</item>
+	</style>
+
+	<style name="ActionModeStyle" parent="@style/Widget.MaterialComponents.ActionBar.Primary">
+		<item name="background">?android:colorPrimaryDark</item>
+		<item name="titleTextStyle">@style/ActionModeTitleTextStyle</item>
+	</style>
+
+	<style name="ActionModeTitleTextStyle" parent="@style/TextAppearance.MaterialComponents.Headline6">
+		<item name="android:textColor">@android:color/white</item>
+		<item name="android:textSize">16sp</item>
+	</style>
+
+</resources>

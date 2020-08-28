@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<com.google.android.material.appbar.MaterialToolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="?android:colorPrimary"
+		app:popupTheme="@style/ThemeOverlay.MaterialComponents.Light"
+		app:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+		app:titleTextColor="@color/md_white_1000" />
+
+</com.google.android.material.appbar.AppBarLayout>

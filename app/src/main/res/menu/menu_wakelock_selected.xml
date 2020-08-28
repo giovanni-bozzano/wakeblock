@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<item
+		android:id="@+id/wakelock_edit_time"
+		android:icon="@drawable/ic_wakelock_edit_time"
+		android:orderInCategory="0"
+		android:title="Edit Time"
+		app:showAsAction="always" />
+
+	<item
+		android:id="@+id/wakelock_block_unblock"
+		android:icon="@drawable/ic_wakelock_unblock"
+		android:orderInCategory="1"
+		android:title="Unblock"
+		app:showAsAction="always" />
+
+	<item
+		android:id="@+id/wakelock_information"
+		android:icon="@drawable/ic_wakelock_information"
+		android:orderInCategory="2"
+		android:title="Information"
+		app:showAsAction="always" />
+
+	<item
+		android:id="@+id/wakelock_delete"
+		android:icon="@drawable/ic_wakelock_delete"
+		android:orderInCategory="3"
+		android:title="Delete"
+		app:showAsAction="always" />
+
+</menu>

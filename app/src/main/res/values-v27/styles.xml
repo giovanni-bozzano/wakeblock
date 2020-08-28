@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<style name="AppTheme.Light" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+		<item name="windowActionModeOverlay">true</item>
+		<item name="actionModeStyle">@style/ActionModeStyle</item>
+		<item name="android:statusBarColor">@color/md_green_800</item>
+		<item name="colorPrimary">@color/md_green_700</item>
+		<item name="colorPrimaryDark">@color/md_green_800</item>
+		<item name="colorAccent">@color/md_green_800</item>
+		<item name="android:navigationBarColor">?android:colorBackground</item>
+		<item name="android:windowLightNavigationBar">true</item>
+	</style>
+
+</resources>

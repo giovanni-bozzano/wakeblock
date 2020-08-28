@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<item
+		android:id="@+id/action_search"
+		android:orderInCategory="0"
+		android:title="@string/search"
+		app:actionViewClass="androidx.appcompat.widget.SearchView"
+		app:showAsAction="ifRoom|collapseActionView" />
+
+	<item
+		android:icon="@drawable/ic_swap"
+		android:orderInCategory="1"
+		android:title="@string/order"
+		app:showAsAction="always">
+
+		<menu>
+
+			<item
+				android:id="@+id/order_by_name"
+				android:checked="false"
+				android:title="@string/order_by_name"
+				app:actionViewClass="android.widget.CheckBox"
+				app:showAsAction="ifRoom" />
+
+			<item
+				android:id="@+id/order_by_occurrences"
+				android:checked="false"
+				android:title="@string/order_by_occurrences"
+				app:actionViewClass="android.widget.CheckBox"
+				app:showAsAction="ifRoom" />
+
+			<item
+				android:id="@+id/order_by_times_blocked"
+				android:checked="false"
+				android:title="@string/order_by_times_blocked"
+				app:actionViewClass="android.widget.CheckBox"
+				app:showAsAction="ifRoom" />
+
+			<item
+				android:id="@+id/order_by_run_time"
+				android:checked="false"
+				android:title="@string/order_by_run_time"
+				app:actionViewClass="android.widget.CheckBox"
+				app:showAsAction="ifRoom" />
+
+		</menu>
+
+	</item>
+
+	<item
+		android:icon="@drawable/ic_menu"
+		android:orderInCategory="2"
+		android:title="@string/filter"
+		app:showAsAction="always">
+
+		<menu>
+
+			<item
+				android:id="@+id/boot_list"
+				android:checked="false"
+				android:title="@string/list_since_boot"
+				app:actionViewClass="android.widget.CheckBox"
+				app:showAsAction="ifRoom" />
+
+			<item
+				android:id="@+id/hide_system_wakelocks"
+				android:checked="false"
+				android:title="@string/hide_system_wakelocks"
+				app:actionViewClass="android.widget.CheckBox"
+				app:showAsAction="ifRoom" />
+
+			<item
+				android:id="@+id/show_only_blocked_wakelocks"
+				android:checked="false"
+				android:title="@string/show_only_blocked_wakelocks"
+				app:actionViewClass="android.widget.CheckBox"
+				app:showAsAction="ifRoom" />
+
+		</menu>
+
+	</item>
+
+</menu>

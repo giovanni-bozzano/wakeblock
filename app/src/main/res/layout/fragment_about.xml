@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+		android:id="@+id/refreshFaq"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<com.google.android.material.textview.MaterialTextView
+					android:id="@+id/aboutView"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingLeft="@dimen/padding_normal"
+					android:paddingTop="@dimen/padding_normal"
+					android:paddingRight="@dimen/padding_normal"
+					android:paddingBottom="@dimen/padding_small"
+					android:scrollbars="vertical"
+					android:text="@string/process_wait" />
+
+				<com.google.android.material.textview.MaterialTextView
+					android:id="@+id/patronView"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:paddingLeft="@dimen/padding_normal"
+					android:paddingTop="@dimen/padding_small"
+					android:paddingRight="@dimen/padding_normal"
+					android:paddingBottom="@dimen/padding_normal"
+					android:scrollbars="vertical"
+					android:text="@string/process_wait" />
+
+			</LinearLayout>
+
+		</ScrollView>
+
+	</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

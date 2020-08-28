@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:paddingLeft="@dimen/padding_normal"
+	android:paddingRight="@dimen/padding_normal">
+
+	<com.google.android.material.textview.MaterialTextView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingLeft="@dimen/padding_small"
+		android:paddingTop="@dimen/padding_normal"
+		android:paddingRight="@dimen/padding_small"
+		android:paddingBottom="@dimen/padding_normal"
+		android:text="@string/wakelock_dialog" />
+
+	<com.google.android.material.textfield.TextInputEditText
+		android:id="@+id/block_time"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:inputType="number" />
+
+</LinearLayout>

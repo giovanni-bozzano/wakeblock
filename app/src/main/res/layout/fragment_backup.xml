@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:weightSum="2">
+
+	<com.google.android.material.card.MaterialCardView
+		android:id="@+id/backup"
+		style="@style/Widget.MaterialComponents.CardView"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/padding_normal"
+		android:layout_marginTop="@dimen/padding_normal"
+		android:layout_marginEnd="@dimen/padding_small"
+		android:layout_marginBottom="@dimen/padding_normal"
+		android:layout_weight="1"
+		android:foreground="?android:selectableItemBackground">
+
+		<com.google.android.material.textview.MaterialTextView
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+			android:layout_gravity="center"
+			android:drawablePadding="16dp"
+			android:gravity="center_vertical"
+			android:padding="16dp"
+			android:text="Backup"
+			android:textAlignment="center" />
+
+	</com.google.android.material.card.MaterialCardView>
+
+	<com.google.android.material.card.MaterialCardView
+		android:id="@+id/restore"
+		style="@style/Widget.MaterialComponents.CardView"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="@dimen/padding_small"
+		android:layout_marginTop="@dimen/padding_normal"
+		android:layout_marginEnd="@dimen/padding_normal"
+		android:layout_marginBottom="@dimen/padding_normal"
+		android:layout_weight="1"
+		android:foreground="?android:selectableItemBackground">
+
+		<com.google.android.material.textview.MaterialTextView
+			android:layout_width="match_parent"
+			android:layout_height="60dp"
+			android:layout_gravity="center"
+			android:drawablePadding="16dp"
+			android:gravity="center_vertical"
+			android:padding="16dp"
+			android:text="Restore"
+			android:textAlignment="center" />
+
+	</com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

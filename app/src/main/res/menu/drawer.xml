@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<group
+		android:id="@+id/main_group"
+		android:checkableBehavior="single">
+		<item
+			android:id="@+id/fragment_home"
+			android:title="Home" />
+		<item
+			android:id="@+id/fragment_detected_wakelocks"
+			android:title="WakeLocks" />
+		<item
+			android:id="@+id/fragment_backup"
+			android:title="Backup" />
+		<item
+			android:id="@+id/fragment_faq"
+			android:title="FAQ" />
+		<item
+			android:id="@+id/fragment_about"
+			android:title="About" />
+		<item
+			android:id="@+id/fragment_settings"
+			android:title="Settings" />
+	</group>
+
+</menu>

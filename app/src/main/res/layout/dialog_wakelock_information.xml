@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:padding="@dimen/padding_normal">
+
+	<com.google.android.material.textview.MaterialTextView
+		android:id="@+id/wakelock_tag"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingBottom="@dimen/padding_small"
+		android:textSize="16sp"
+		android:textStyle="bold" />
+
+	<com.google.android.material.textview.MaterialTextView
+		android:id="@+id/wakelock_occurrences"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textSize="14sp" />
+
+	<com.google.android.material.textview.MaterialTextView
+		android:id="@+id/wakelock_times_blocked"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textSize="14sp" />
+
+	<com.google.android.material.textview.MaterialTextView
+		android:id="@+id/wakelock_runtime"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textSize="14sp" />
+
+	<com.google.android.material.textview.MaterialTextView
+		android:id="@+id/wakelock_block_time"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textSize="14sp" />
+
+	<com.google.android.material.textview.MaterialTextView
+		android:id="@+id/wakelock_last_acquisition"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textSize="14sp" />
+
+</LinearLayout>

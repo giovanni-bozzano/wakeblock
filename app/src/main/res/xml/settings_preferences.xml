@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<CheckBoxPreference
+		android:key="dark_mode"
+		android:summary="Tap to switch dark mode on or off"
+		android:title="Dark Mode" />
+
+	<CheckBoxPreference
+		android:key="debug_logs"
+		android:summary="Tap to switch debug logs on or off"
+		android:title="Debug Logs" />
+
+	<CheckBoxPreference
+		android:key="foreground_service"
+		android:summary="Tap to set the WakeBlock Service to foreground or background"
+		android:title="Foreground Service" />
+
+	<Preference
+		android:key="manual_service_binder"
+		android:summary="Tap to manually bind the WakeBlock Service to the system"
+		android:title="Manual Service Binder" />
+
+</PreferenceScreen>

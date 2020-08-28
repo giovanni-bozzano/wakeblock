@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<com.google.android.material.card.MaterialCardView
+			style="@style/Widget.MaterialComponents.CardView"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="12dp"
+			android:layout_marginTop="12dp"
+			android:layout_marginRight="12dp"
+			android:layout_marginBottom="12dp">
+
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<com.google.android.material.textview.MaterialTextView
+					android:id="@+id/core_mod_version_text"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:gravity="center"
+					android:padding="6dp"
+					android:textStyle="bold" />
+
+				<FrameLayout
+					android:id="@+id/service_status_container"
+					android:layout_width="fill_parent"
+					android:layout_height="100dp"
+					android:background="@color/md_white_1000"
+					android:foregroundGravity="center"
+					android:orientation="vertical">
+
+					<ImageView
+						android:id="@+id/service_status_image"
+						android:layout_width="54dp"
+						android:layout_height="54dp"
+						android:layout_gravity="center" />
+
+				</FrameLayout>
+
+				<com.google.android.material.textview.MaterialTextView
+					android:id="@+id/service_status_text"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:gravity="center"
+					android:padding="6dp"
+					android:textStyle="bold" />
+
+			</LinearLayout>
+
+		</com.google.android.material.card.MaterialCardView>
+
+		<com.google.android.material.card.MaterialCardView
+			style="@style/Widget.MaterialComponents.CardView"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="12dp"
+			android:layout_marginRight="12dp"
+			android:layout_marginBottom="12dp">
+
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<FrameLayout
+					android:id="@+id/patcher_container"
+					android:layout_width="fill_parent"
+					android:layout_height="100dp"
+					android:background="@color/md_grey_500"
+					android:foregroundGravity="center"
+					android:orientation="vertical">
+
+					<ImageView
+						android:id="@+id/patcher_image"
+						android:layout_width="54dp"
+						android:layout_height="54dp"
+						android:layout_gravity="center"
+						android:src="@drawable/ic_patcher" />
+
+				</FrameLayout>
+
+				<com.google.android.material.textview.MaterialTextView
+					android:id="@+id/patcher_text"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:gravity="center"
+					android:padding="6dp"
+					android:textStyle="bold" />
+
+			</LinearLayout>
+
+		</com.google.android.material.card.MaterialCardView>
+
+		<com.google.android.material.card.MaterialCardView
+			android:id="@+id/uninstall_card"
+			style="@style/Widget.MaterialComponents.CardView"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginLeft="12dp"
+			android:layout_marginRight="12dp"
+			android:layout_marginBottom="12dp"
+			android:visibility="invisible">
+
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<FrameLayout
+					android:id="@+id/uninstall_container"
+					android:layout_width="fill_parent"
+					android:layout_height="100dp"
+					android:background="@color/md_red_500"
+					android:foregroundGravity="center"
+					android:orientation="vertical">
+
+					<ImageView
+						android:layout_width="54dp"
+						android:layout_height="54dp"
+						android:layout_gravity="center"
+						android:src="@drawable/ic_uninstall" />
+
+				</FrameLayout>
+
+				<com.google.android.material.textview.MaterialTextView
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:layout_gravity="center"
+					android:gravity="center"
+					android:padding="6dp"
+					android:text="UNINSTALL"
+					android:textStyle="bold" />
+
+			</LinearLayout>
+
+		</com.google.android.material.card.MaterialCardView>
+
+	</LinearLayout>
+
+</ScrollView>
