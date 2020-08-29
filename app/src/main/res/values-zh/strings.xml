@@ -32,27 +32,13 @@
 	<string name="core_file_not_found">找不到核心文件</string>
 	<string name="core_mod_already_installed">核心 MOD 已安装</string>
 	<string name="deodexed_rom">DEODEXED ROM</string>
-	<string name="dialog_architecture_message"
-		translatable="false">Your device architecture is not supported by WakeBlock. WakeBlock only supports armeabi-v7a and arm64-v8a devices.
-	</string>
-	<string name="dialog_architecture_title"
-		translatable="false">Unsupported device
-	</string>
-	<string name="dialog_changelog_do_not_ask_again"
-		translatable="false">Do not ask again
-	</string>
-	<string name="dialog_changelog_message"
-		translatable="false">If you have the current core mod installed (or if you are not sure about that because of the latest issues), you will need to manually restore to stock (by manually restoring the backup or by dirty flashing the ROM).\n\nThis only needs to be done this time. From now on the app will be able to automatically update the core mod.
-	</string>
-	<string name="dialog_changelog_title"
-		translatable="false">IMPORTANT [0.2.0]
-	</string>
-	<string name="dialog_uninstall_message"
-		translatable="false">Are you sure you want to uninstall the core mod?\n\nThe device will reboot to complete the uninstallation.
-	</string>
-	<string name="dialog_uninstall_title"
-		translatable="false">Uninstall
-	</string>
+	<string name="dialog_architecture_message">阻止唤醒不支持你的设备架构。阻止运行只支持armeabi-v7a及arm64-v8a设备。</string>
+	<string name="dialog_architecture_title">设备不支持</string>
+	<string name="dialog_changelog_do_not_ask_again">不再询问</string>
+	<string name="dialog_changelog_message">如果你已经安装当前核心mod（或者由于最近的问题你不确定），则需要手动还原为原厂文件（可以手动还原备份，或不清数据，直接刷入刷机包）。\n\n只有这次需要这项操作。从今以后，应用可以自动升级核心mod。</string>
+	<string name="dialog_changelog_title">重要 [0.2.0]</string>
+	<string name="dialog_uninstall_message">你确定要卸载核心mod吗？\n\n设备将重启，以便完成卸载。</string>
+	<string name="dialog_uninstall_title">卸载</string>
 	<string name="enableDarkMode">深色模式</string>
 	<string name="error_0">创建 /patcher 文件夹失败</string>
 	<string name="error_1">清除之前的临时文件失败</string>
@@ -92,9 +78,7 @@
 	<string name="magisk_warning_button">好的，明白了！</string>
 	<string name="minutes">分，</string>
 	<string name="occurrences_since_boot">启动后唤醒次数</string>
-	<string name="ok"
-		translatable="false">OK
-	</string>
+	<string name="ok">确定</string>
 	<string name="order">排序</string>
 	<string name="order_by_name">按名字排序</string>
 	<string name="order_by_occurrences">按唤醒次数排序</string>
