@@ -83,7 +83,7 @@
 	<string name="fragment_home">主界面</string>
 	<string name="fragment_regex">正则表达式</string>
 	<string name="hide_system_wakelocks">隐藏系统唤醒锁</string>
-	<string name="hours">小时，</string>
+	<string name="hours">时，</string>
 	<string name="install_core_mod">安装核心MOD</string>
 	<string name="json_error">写入JSON文件时出错！</string>
 	<string name="last_acquisition">最后获取</string>
