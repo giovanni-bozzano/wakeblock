@@ -32,27 +32,13 @@
 	<string name="core_file_not_found">CORE FILE NOT FOUND</string>
 	<string name="core_mod_already_installed">CORE MOD ALREADY INSTALLED</string>
 	<string name="deodexed_rom">DEODEXED ROM</string>
-	<string name="dialog_architecture_message"
-		translatable="false">Your device architecture is not supported by WakeBlock. WakeBlock only supports armeabi-v7a and arm64-v8a devices.
-	</string>
-	<string name="dialog_architecture_title"
-		translatable="false">Unsupported device
-	</string>
-	<string name="dialog_changelog_do_not_ask_again"
-		translatable="false">Do not ask again
-	</string>
-	<string name="dialog_changelog_message"
-		translatable="false">If you have the current core mod installed (or if you are not sure about that because of the latest issues), you will need to manually restore to stock (by manually restoring the backup or by dirty flashing the ROM).\n\nThis only needs to be done this time. From now on the app will be able to automatically update the core mod.
-	</string>
-	<string name="dialog_changelog_title"
-		translatable="false">IMPORTANT [0.2.0]
-	</string>
-	<string name="dialog_uninstall_message"
-		translatable="false">Are you sure you want to uninstall the core mod?\n\nThe device will reboot to complete the uninstallation.
-	</string>
-	<string name="dialog_uninstall_title"
-		translatable="false">Uninstall
-	</string>
+	<string name="dialog_architecture_message">Your device architecture is not supported by WakeBlock. WakeBlock only supports armeabi-v7a and arm64-v8a devices.</string>
+	<string name="dialog_architecture_title">Unsupported device</string>
+	<string name="dialog_changelog_do_not_ask_again">Do not ask again</string>
+	<string name="dialog_changelog_message">If you have the current core mod installed (or if you are not sure about that because of the latest issues), you will need to manually restore to stock (by manually restoring the backup or by dirty flashing the ROM).\n\nThis only needs to be done this time. From now on the app will be able to automatically update the core mod.</string>
+	<string name="dialog_changelog_title">IMPORTANT [0.2.0]</string>
+	<string name="dialog_uninstall_message">Are you sure you want to uninstall the core mod?\n\nThe device will reboot to complete the uninstallation.</string>
+	<string name="dialog_uninstall_title">Uninstall</string>
 	<string name="enableDarkMode">Dark Mode</string>
 	<string name="error_0">Creating /patcher folder failed</string>
 	<string name="error_1">Cleaning previous temporary files failed</string>
@@ -92,9 +78,7 @@
 	<string name="magisk_warning_button">OK, gotcha!</string>
 	<string name="minutes">min,</string>
 	<string name="occurrences_since_boot">Occurrences since boot</string>
-	<string name="ok"
-		translatable="false">OK
-	</string>
+	<string name="ok">OK</string>
 	<string name="order">Order</string>
 	<string name="order_by_name">Order by name</string>
 	<string name="order_by_occurrences">Order by occurrences</string>
