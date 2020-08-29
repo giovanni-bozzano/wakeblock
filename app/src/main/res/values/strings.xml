@@ -76,7 +76,6 @@
 	<string name="error_19">Copying remove-module.zip file failed</string>
 	<string name="extracting_framework">Extracting System Framework…</string>
 	<string name="faq_refresh">Updating FAQs…</string>
-	<string name="process_wait">Beep Boop. Wait. I need to process stuff. Beep Boop.</string>
 	<string name="filter">Filter</string>
 	<string name="fragment_debug">DEBUG</string>
 	<string name="fragment_detected_wakelocks">WAKELOCKS</string>
@@ -103,16 +102,12 @@
 	<string name="order_by_run_time">Order by run time</string>
 	<string name="patching_error">ERROR WHILE PATCHING</string>
 	<string name="patching_smali_code">Patching Smali Code…</string>
+	<string name="process_wait">Beep Boop. Wait. I need to process stuff. Beep Boop.</string>
 	<string name="rbwakelock">Restore WakeLocks</string>
 	<string name="repackaging_framework">Repackaging System Framework…</string>
 	<string name="root_permissions_denied">Root Permissions are Denied!</string>
 	<string name="root_permissions_denied_explanation">We need Root Permissions to be able to do our magic. A small dialog for it will pop shortly. Please grant them, otherwise the app will close itself!!</string>
 	<string name="run_time_since_boot">Run time since boot</string>
-	<string name="this_may_take_several_minutes">this may take several minutes</string>
-	<string name="times_blocked_since_boot">Times blocked since boot</string>
-	<string name="total_occurrences">Total occurrences</string>
-	<string name="total_times_blocked">Total times blocked</string>
-	<string name="total_run_time">Total run time</string>
 	<string name="search">Search</string>
 	<string name="seconds">s,</string>
 	<string name="service_bound">SERVICE BOUND</string>
@@ -121,6 +116,11 @@
 	<string name="storage_permissions_denied">Storage and Root Permissions</string>
 	<string name="storage_permissions_denied_explanation">We need Storage Permission to be able to do our magic. A small dialog for it will pop shortly. Please grant them!</string>
 	<string name="storage_permissions_denied_ok">OK, let me do this.</string>
+	<string name="this_may_take_several_minutes">this may take several minutes</string>
+	<string name="times_blocked_since_boot">Times blocked since boot</string>
+	<string name="total_occurrences">Total occurrences</string>
+	<string name="total_run_time">Total run time</string>
+	<string name="total_times_blocked">Total times blocked</string>
 	<string name="unblock">Unblock</string>
 	<string name="unblock_wakelock">Unblock WakeLock</string>
 	<string name="unsupported_framework">UNSUPPORTED FRAMEWORK</string>
