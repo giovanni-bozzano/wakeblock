@@ -27,7 +27,7 @@
 	<string name="choice_reboot">自动刷入</string>
 	<string name="choice_reboot_old">创建zip并刷入，就是现在！</string>
 	<string name="choice_warning"> !~ 警告 ~! </string>
-	<string name="choice_warning_message">我们检测到你的电量低于50%。补丁过程需要不少资源，可长达30分钟。我们强烈你在打补丁前将手机连接到外部电源上！不过无论如何，你自己做决定： </string>
+	<string name="choice_warning_message">我们检测到你的电量低于50%。补丁过程需要不少资源，可长达30分钟。我们强烈你在打补丁前将手机连接到外部电源上！不过无论如何，决定权在你： </string>
 	<string name="confirm">确认</string>
 	<string name="core_file_not_found">找不到核心文件</string>
 	<string name="core_mod_already_installed">核心 MOD 已安装</string>
