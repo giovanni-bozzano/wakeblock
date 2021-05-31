@@ -185,9 +185,10 @@ class PatcherProcess implements Runnable
 			File file = new File(this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services-original/classes.dex");
 			if (file.exists()) {
 				org.jf.baksmali.Main.main(new String[] { "d", "-o", this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services", "--di", "false", this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services.original.jar" });
-				File classe = new File (this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services/PowerManagerService.smali");
+				File classe = new File (this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services/com/android/server/power/PowerManagerService.smali");
 				if(classe.exists()) {
-					File pulizia = new File(this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services/PowerManagerService.smali");
+					File pulizia = new File(this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services");
+					Log.println()
 					if (!file.delete() || !classe.delete() || !pulizia.delete()) {
 						throw new PatchException("Checking jar file failed");
 					}
