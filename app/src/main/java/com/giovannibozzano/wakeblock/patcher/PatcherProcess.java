@@ -184,13 +184,18 @@ class PatcherProcess implements Runnable
 			Utils.unzip(this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services.original.jar", this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services-original");
 			File file = new File(this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services-original/classes.dex");
 			if (file.exists()) {
+				commandList.clear();
+				commandList.add("sync");
+				commandList.add("echo 3 > /proc/sys/vm/drop_caches");
+				if (!ExecuteAsRoot.execute(commandList)) {
+					throw new PatchException(this.service.get().getResources().getString(R.string.error_5));
+				}
 				org.jf.baksmali.Main.main(new String[] { "d", "-o", this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services", "--di", "false", this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services.original.jar" });
-				File classe = new File (this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services/com/android/server/power/PowerManagerService.smali");
-				if(classe.exists()) {
-					File pulizia = new File(this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services");
-					if (!file.delete() || !classe.delete() || !pulizia.delete()) {
-						throw new PatchException("Checking jar file failed");
-					}
+				if (!file.delete()) {
+					throw new PatchException("Checking jar file failed");
+				}
+				File smaliClass = new File (this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services/com/android/server/power/PowerManagerService.smali");
+				if(smaliClass.exists()) {
 					return true;
 				}
 			}
@@ -246,13 +251,6 @@ class PatcherProcess implements Runnable
 					throw new PatchException(this.service.get().getResources().getString(R.string.error_5));
 				}
 				org.jf.baksmali.Main.main(new String[] { "d", "-o", this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services", "--di", "false", this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services_classes.dex" });
-			} else {
-				commandList.add("sync");
-				commandList.add("echo 3 > /proc/sys/vm/drop_caches");
-				if (!ExecuteAsRoot.execute(commandList)) {
-					throw new PatchException(this.service.get().getResources().getString(R.string.error_5));
-				}
-				org.jf.baksmali.Main.main(new String[] { "x", "-d", "/system/framework/arm" + (this.patchType == PatchType.ODEXED_ARM ? "" : "64"), "-o", this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services", "--di", "false", this.coreModPath });
 			}
 		} else {
 			commandList.add("sync");
