@@ -188,7 +188,6 @@ class PatcherProcess implements Runnable
 				File classe = new File (this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services/com/android/server/power/PowerManagerService.smali");
 				if(classe.exists()) {
 					File pulizia = new File(this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services");
-					Log.println()
 					if (!file.delete() || !classe.delete() || !pulizia.delete()) {
 						throw new PatchException("Checking jar file failed");
 					}
