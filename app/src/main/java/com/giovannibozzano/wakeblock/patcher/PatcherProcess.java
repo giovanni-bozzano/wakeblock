@@ -184,10 +184,15 @@ class PatcherProcess implements Runnable
 			Utils.unzip(this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services.original.jar", this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services-original");
 			File file = new File(this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services-original/classes.dex");
 			if (file.exists()) {
-				if (!file.delete()) {
-					throw new PatchException("Checking jar file failed");
+				org.jf.baksmali.Main.main(new String[] { "d", "-o", this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services", "--di", "false", this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services.original.jar" });
+				File classe = new File (this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services/PowerManagerService.smali");
+				if(classe.exists()) {
+					File pulizia = new File(this.service.get().getCacheDir().getAbsolutePath() + "/patcher/services/PowerManagerService.smali");
+					if (!file.delete() || !classe.delete() || !pulizia.delete()) {
+						throw new PatchException("Checking jar file failed");
+					}
+					return true;
 				}
-				return true;
 			}
 		} catch (IOException exception) {
 			throw new PatchException("Checking jar file failed", exception);
