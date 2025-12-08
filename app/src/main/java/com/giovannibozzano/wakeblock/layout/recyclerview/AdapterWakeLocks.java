@@ -99,22 +99,22 @@ public class AdapterWakeLocks extends Adapter<HolderWakeLock>
 		if (sharedPreferences.getBoolean("boot_list", false)) {
 			int seconds = (int) (this.wakeLockData.get(position).getRunTimeBoot() / 1000) % 60;
 			int minutes = (int) ((this.wakeLockData.get(position).getRunTimeBoot() / 60000) % 60);
-			int hours = (int) ((this.wakeLockData.get(position).getRunTimeBoot() / 3600000) % 24);
+			int hours = (int) ((this.wakeLockData.get(position).getRunTimeBoot() / 3600000));
 			occurrences.setText(viewHolder.itemView.getResources().getString(R.string.occurrences_since_boot) + ": " + this.wakeLockData.get(position).getOccurrencesBoot());
 			timesBlocked.setText(viewHolder.itemView.getResources().getString(R.string.times_blocked_since_boot) + ": " + this.wakeLockData.get(position).getTimesBlockedBoot());
-			runTime.setText(viewHolder.itemView.getResources().getString(R.string.run_time_since_boot) + ": " + hours + " " + viewHolder.itemView.getResources().getString(R.string.hours) + " " + minutes + " " + viewHolder.itemView.getResources().getString(R.string.minutes) + " " + seconds + " " + viewHolder.itemView.getResources().getString(R.string.seconds) + " " + (this.wakeLockData.get(position).getRunTimeBoot() - seconds * 1000 - minutes * 60000 - hours * 3600000) + " ms");
+			runTime.setText(viewHolder.itemView.getResources().getString(R.string.run_time_since_boot) + ": " + hours + " " + viewHolder.itemView.getResources().getString(R.string.hours) + " " + minutes + " " + viewHolder.itemView.getResources().getString(R.string.minutes) + " " + seconds + " " + viewHolder.itemView.getResources().getString(R.string.seconds) + " " + (this.wakeLockData.get(position).getRunTimeBoot() % 1000) + " ms");
 		} else {
 			int seconds = (int) (this.wakeLockData.get(position).getRunTimeTotal() / 1000) % 60;
 			int minutes = (int) ((this.wakeLockData.get(position).getRunTimeTotal() / 60000) % 60);
-			int hours = (int) ((this.wakeLockData.get(position).getRunTimeTotal() / 3600000) % 24);
+			int hours = (int) ((this.wakeLockData.get(position).getRunTimeTotal() / 3600000));
 			occurrences.setText(viewHolder.itemView.getResources().getString(R.string.total_occurrences) + ": " + this.wakeLockData.get(position).getOccurrencesTotal());
 			timesBlocked.setText(viewHolder.itemView.getResources().getString(R.string.total_times_blocked) + ": " + this.wakeLockData.get(position).getTimesBlockedTotal());
-			runTime.setText(viewHolder.itemView.getResources().getString(R.string.total_run_time) + ": " + hours + " " + viewHolder.itemView.getResources().getString(R.string.hours) + " " + minutes + " " + viewHolder.itemView.getResources().getString(R.string.minutes) + " " + seconds + " " + viewHolder.itemView.getResources().getString(R.string.seconds) + " " + (this.wakeLockData.get(position).getRunTimeTotal() - seconds * 1000 - minutes * 60000 - hours * 3600000) + " ms");
+			runTime.setText(viewHolder.itemView.getResources().getString(R.string.total_run_time) + ": " + hours + " " + viewHolder.itemView.getResources().getString(R.string.hours) + " " + minutes + " " + viewHolder.itemView.getResources().getString(R.string.minutes) + " " + seconds + " " + viewHolder.itemView.getResources().getString(R.string.seconds) + " " + (this.wakeLockData.get(position).getRunTimeTotal() % 1000) + " ms");
 		}
 		int seconds = (int) (this.wakeLockData.get(position).getBlockTime() / 1000) % 60;
 		int minutes = (int) ((this.wakeLockData.get(position).getBlockTime() / 60000) % 60);
-		int hours = (int) ((this.wakeLockData.get(position).getBlockTime() / 3600000) % 24);
-		blockTime.setText(viewHolder.itemView.getResources().getString(R.string.block_time) + ": " + hours + " " + viewHolder.itemView.getResources().getString(R.string.hours) + " " + minutes + " " + viewHolder.itemView.getResources().getString(R.string.minutes) + " " + seconds + " " + viewHolder.itemView.getResources().getString(R.string.seconds) + " " + (this.wakeLockData.get(position).getBlockTime() - seconds * 1000 - minutes * 60000 - hours * 3600000) + " ms");
+		int hours = (int) ((this.wakeLockData.get(position).getBlockTime() / 3600000));
+		blockTime.setText(viewHolder.itemView.getResources().getString(R.string.block_time) + ": " + hours + " " + viewHolder.itemView.getResources().getString(R.string.hours) + " " + minutes + " " + viewHolder.itemView.getResources().getString(R.string.minutes) + " " + seconds + " " + viewHolder.itemView.getResources().getString(R.string.seconds) + " " + (this.wakeLockData.get(position).getBlockTime() % 1000) + " ms");
 		if (this.wakeLockData.get(position).getLastAcquisition() != null) {
 			Calendar calendar = Calendar.getInstance();
 			calendar.setTimeInMillis(this.wakeLockData.get(position).getLastAcquisition());
